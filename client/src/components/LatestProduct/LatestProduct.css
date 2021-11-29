@@ -1,0 +1,17 @@
+.heroContent{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5% 0;
+   
+    /* background-color: aqua; */
+}
+.card {
+    max-width:  300px
+  }
+  .media{
+    height: 0px;
+    padding-top :56.25%;
+  }
+  .actions {
+    display: flex;
+  }

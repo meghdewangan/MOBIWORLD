@@ -1,0 +1,26 @@
+
+.container{
+    /* max-width: 900px; */
+    margin: 0 auto;
+    padding: 0 10%;
+    
+}
+
+.conatiner-background{
+    padding: 10% 0;
+    background-color: #fafafa;
+}
+.box-layout_HomePage{
+    align-items: center;
+    background : hsl(220, 93%, 6%) url('/images/top_banner.jpg');
+    background-size: cover;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+
+.product-Category-Container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3em;
+}

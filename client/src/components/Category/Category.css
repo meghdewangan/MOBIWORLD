@@ -1,0 +1,20 @@
+
+.heroContent{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    color: green;
+    /* background-color: aqua; */
+}
+
+.CardContent {
+    padding: '10px';
+    transition: all .5s ease-out;
+}
+.CardContent:hover {
+    background: rgb(32, 189, 32);
+   
+}
+.catagory-grid{
+    padding-bottom: 10%;
+}

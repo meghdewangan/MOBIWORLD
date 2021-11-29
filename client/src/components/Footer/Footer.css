@@ -1,0 +1,9 @@
+.box-layout_Footer{
+    align-items: center;
+    background : url('/images/footerBanner.png');
+    background-size: cover;
+    display: flex;
+    height: 35vh;
+    justify-content: center;
+    margin-top: 5vh;
+}

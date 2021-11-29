@@ -1,0 +1,33 @@
+{
+  "name": "MOBIWORLD",
+  "version": "1.0.0",
+  "description": "\"Make a web application used in buy and sell second hand mobiles\"",
+  "main": "./server/server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "MEGHRAJ DEWANGAN, PREM KUMAR PAINKRA, HIMANSHU SAHU, RITIK SAHU, ANKUSH KUMAR SINGH, ABHISHEK TOPPO",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.4.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.13",
+    "multer": "^1.4.3",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "passport-session": "^1.0.2",
+    "password": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
