@@ -15,8 +15,9 @@ const adsSelector = (ads, { text, category }) => {
     return ads.ads.filter(ad => {
         console.log('filter ad', ad)
         const searchByCategory = ad.category == category;
-        const textMatch = ad.title.toLowerCase().includes(text.toLowerCase());
-        return searchByCategory & textMatch ;
+        // const textMatch = ad.mobileName.toLowerCase().includes(text.toLowerCase());
+        return searchByCategory
+        //  & textMatch ;
     })
 }
 
@@ -26,7 +27,7 @@ export const adsSelectorByText = (ads, { text }) => {
     return ads.ads.filter(ad => {
         console.log('filter ad', ad)
       
-        const textMatch = ad.title.toLowerCase().includes(text.toLowerCase());
+        const textMatch = ad.mobileName.toLowerCase().includes(text.toLowerCase());
         return textMatch ;
     })
 }

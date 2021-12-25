@@ -22,7 +22,7 @@ class AdDetail extends Component {
         return (
             <Fragment>
                 <div className="layout">
-                    <center><h1>Ad Detail</h1></center>
+                    <center><h1>Detail</h1></center>
                     
                     {
                         ads._id == this.props.match.params.id ? 'No Ad' :
@@ -51,34 +51,44 @@ class AdDetail extends Component {
                                             </Grid>
                                             <Grid item xs={12} md={4}>
                                                 <CardContent>
-                                                    <Typography style={{ backgroundColor: 'gold', padding: '10%' }} variant="title" gutterBottom align="center" >
-                                                        {`Rs. ${filteredAds.price}`}
+                                                    <Typography style={{ backgroundColor: 'orange', padding: '10%' }} variant="title" gutterBottom align="center" >
+                                                        {`${filteredAds.mobileName} (${filteredAds.category})`}
                                                     </Typography>
-                                                    <Typography variant="headline" >{filteredAds.title}</Typography>
-                                                    <Typography variant="subheading" color="textSecondary">
+                                                    <Typography variant="headline" >{filteredAds.description}</Typography>
+                                                    {/* <Typography variant="subheading" color="textSecondary">
                                                         {filteredAds.category.charAt(0).toUpperCase() + filteredAds.category.slice(1)}
+                                                    </Typography> */}
+                                                    <Typography variant="subheading" color="textSecondary">
+                                                        {`OLD :  ${filteredAds.old}`}
                                                     </Typography>
                                                     <Typography variant="subheading" paragraph>
-                                                        {filteredAds.name}
+                                                        {`Rs. ${filteredAds.priceOld}`}
                                                     </Typography>
                                                     <Typography variant="subheading" paragraph>
-                                                        {filteredAds.description}
+                                                        {`IMEI NUMBER :  ${filteredAds.imei}`}
+                                                    </Typography>
+                                                    <Typography variant="subheading" paragraph>
+                                                        {`SELLER NAME :  ${filteredAds.name}`}
                                                     </Typography>
                                                     <Typography variant="subheading" paragraph>
                                                     <i class="fas fa-map-marker-alt"></i> {filteredAds.address}
                                                     </Typography>
-                                                    <Typography variant="subheading" paragraph>
-                                                    <i class="fas fa-city"></i>  {filteredAds.city}
-                                                    </Typography>
 
                                                     <Typography variant="subheading" paragraph>
-                                                    <i class="fas fa-phone"></i>{filteredAds.phone}
+                                                    <i class="fas fa-city"></i> {filteredAds.city}
+                                                    </Typography>
+                                                    {/* <Typography variant="subheading" paragraph>
+                                                    <i class="fas fa-city"></i>  {filteredAds.city}
+                                                    </Typography> */}
+
+                                                    <Typography variant="subheading" paragraph>
+                                                    <i class="fas fa-phone"></i> {filteredAds.phone}
                                                     </Typography>
                                                     <Typography variant="subheading" paragraph>
-                                                    <i class="fas fa-envelope"></i>  {filteredAds.email}
+                                                    <i class="fas fa-envelope"></i> {filteredAds.email}
                                                     </Typography>
                                                     <Typography variant="subheading" paragraph>
-                                                    <i class="fas fa-calendar-alt"></i>  {filteredAds.created_date}
+                                                    <i class="fas fa-calendar-alt"></i> {filteredAds.created_date}
                                                     </Typography>
                                                 </CardContent>
                                             </Grid>
@@ -111,4 +121,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getAdsById })(AdDetail);
-

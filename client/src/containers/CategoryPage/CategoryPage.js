@@ -29,7 +29,7 @@ class CategoryPage extends Component {
                         {
                             ads.length == 0 ? (
                                 <div className="list-item list-item--messagea">
-                                    <h1>No Ads </h1>
+                                    <h1> This brands mobile phone not available </h1>
                                 </div>
                             ) : ads.map((ads) =>
                                 (

@@ -149,7 +149,7 @@ class AdsList extends React.Component {
                         <CardHeader
                             avatar={
                                 <Avatar aria-label="Recipe" className={classes.avatar}>
-                                    S
+                                    MW
                             </Avatar>
                             }
                             action={
@@ -175,11 +175,11 @@ class AdsList extends React.Component {
                             guests. Add 1 cup of frozen peas along with the mussels, if you like.
                             </Typography> */}
                             <Typography component="p">
-                                <strong>Category: </strong>{this.props.category}
+                                <strong>Category: </strong>{(this.props.category)}
                                 {/* <strong>Category: </strong>{this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} */}
                             </Typography>
                             <Typography component="p">
-                                <strong>Price: </strong>{this.props.price}
+                                <strong>Price: </strong>{this.props.priceOld}
                             </Typography>
                         </CardContent>
                     </Link>

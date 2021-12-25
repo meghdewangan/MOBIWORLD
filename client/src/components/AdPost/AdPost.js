@@ -45,14 +45,23 @@ const styles = theme => ({
 class AdPost extends React.Component {
     state = {
         name: "",
-        title: "",
-        category: "",
-        description: "",
-        price: "",
+        phone: "",
+        email: "",
+        aadhar: "",
         address: "",
         city: "",
-        email: "",
-        phone: "",
+        category: "",
+        mobileName: "",
+        description: "",
+        imei: "",
+        // priceNew: "",
+        priceOld: "",
+        old: "",
+
+        // address: "",
+        // city: "",
+        // email: "",
+        // phone: "",
         files: [],
         imagePreviewUrl: "",
         error: "",
@@ -88,9 +97,10 @@ class AdPost extends React.Component {
         console.log(this.state);
         const state = this.state;
 
-        if (!this.state.name || !this.state.title || !this.state.category
-            || !this.state.description || !this.state.price || !this.state.address
-            || !this.state.city || !this.state.email || !this.state.phone) {
+        if (!this.state.name || !this.state.phone || !this.state.email
+            || !this.state.aadhar || !this.state.address || !this.state.city
+            || !this.state.category || !this.state.mobileName || !this.state.description
+            || !this.state.imei || !this.state.old  ) {
             this.setState({
                 error: "Please fill all the feilds correctly"
             });
@@ -109,17 +119,22 @@ class AdPost extends React.Component {
             //     file: this.state.files[0]
             // };
             var formData = new FormData();
-            formData.append("title", state.title);
-            formData.append("category", state.category);
-            formData.append("description", state.description);
-            formData.append("address", state.address);
-            formData.append("price", state.price);
             formData.append("name", state.name);
+            formData.append("phone", state.phone);
             formData.append("email", state.email);
+            formData.append("aadhar", state.aadhar);
+            formData.append("address", state.address);
             formData.append("city", state.city);
+            formData.append("category", state.category);
+            formData.append("mobileName", state.mobileName);
             formData.append("userId", state.userId);
 
-            formData.append("phone", state.phone);
+            formData.append("description", state.description);
+            formData.append("imei", state.imei);
+            // formData.append("priceNew", state.priceNew);
+            formData.append("priceOld", state.priceOld);
+            formData.append("old", state.old);
+
             formData.append("file", state.files[0]);
 
 
@@ -152,7 +167,7 @@ class AdPost extends React.Component {
                 <Grid item xs={12} sm={8}>
                     <Paper className={classes.paper}>
                         <div className={classes.root}>
-                            <h1>Add New Ads</h1>
+                            <h1>Add Details</h1>
                             <form onSubmit={this._handleSubmit} >
                                 <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
@@ -168,6 +183,61 @@ class AdPost extends React.Component {
                                 </FormControl>
                                 <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
+                                        Mobile Number
+                                    </InputLabel>
+                                    <Input
+                                        id="phone"
+                                        type="text"
+                                        value={this.state.phone}
+                                        onChange={this.handleChange("phone")}
+                                    />
+                                </FormControl>
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        Email
+                                    </InputLabel>
+                                    <Input
+                                        id="email"
+                                        type="email"
+                                        value={this.state.email}
+                                        onChange={this.handleChange("email")}
+                                    />
+                                </FormControl>
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        Aadhar Number
+                                    </InputLabel>
+                                    <Input
+                                        id="aadhar"
+                                        type="text"
+                                        value={this.state.aadhar}
+                                        onChange={this.handleChange("aadhar")}
+                                    />
+                                </FormControl>
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        Address
+                                    </InputLabel>
+                                    <Input
+                                        id="address"
+                                        type="text"
+                                        value={this.state.address}
+                                        onChange={this.handleChange("address")}
+                                    />
+                                </FormControl>
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        City
+                                    </InputLabel>
+                                    <Input
+                                        id="city"
+                                        type="text"
+                                        value={this.state.city}
+                                        onChange={this.handleChange("city")}
+                                    />
+                                </FormControl>
+                                {/* <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
                                         Title
                                     </InputLabel>
                                     <Input
@@ -177,7 +247,7 @@ class AdPost extends React.Component {
                                         value={this.state.title}
                                         onChange={this.handleChange("title")}
                                     />
-                                </FormControl>
+                                </FormControl> */}
                                 {/* <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
                                         Category
@@ -190,7 +260,7 @@ class AdPost extends React.Component {
                                     />
                                 </FormControl> */}
                                 <FormControl fullWidth className={classes.margin}>
-                                    <InputLabel htmlFor="category-simple">Category</InputLabel>
+                                    <InputLabel htmlFor="category-simple">Mobile Brand Name</InputLabel>
                                     <Select
                                         value={this.state.category}
                                         onChange={this.handleChange("category")}
@@ -202,23 +272,40 @@ class AdPost extends React.Component {
                                         <MenuItem value="">
                                             <em>None</em>
                                         </MenuItem>
-                                        <MenuItem value="property">Property</MenuItem>
-                                        <MenuItem value="vehicle">Vehicle</MenuItem>
-                                        <MenuItem value="electronics">Electronics</MenuItem>
-                                        <MenuItem value="furniture">Furniture</MenuItem>
-                                        <MenuItem value="jobs">Jobs</MenuItem>
-                                        <MenuItem value="mobiles">Mobiles</MenuItem>
-                                        <MenuItem value="bikes">Bikes</MenuItem>
-                                        <MenuItem value="books">Books</MenuItem>
-                                        <MenuItem value="fashion">Fashion</MenuItem>
-                                        <MenuItem value="pets">Pets</MenuItem>
-                                        <MenuItem value="service">Services</MenuItem>
+                                        <MenuItem value="apple">Apple</MenuItem>
+                                        <MenuItem value="oneplus">OnePlus</MenuItem>
+                                        <MenuItem value="oppo">Oppo</MenuItem>
+                                        <MenuItem value="vivo">Vivo</MenuItem>
+                                        <MenuItem value="samsung">Samsung</MenuItem>
+                                        <MenuItem value="xiaomi">Xiaomi</MenuItem>
+                                        <MenuItem value="realme">Realme</MenuItem>
+                                        <MenuItem value="honor">Honor</MenuItem>
+                                        <MenuItem value="nokia">Nokia</MenuItem>
+                                        <MenuItem value="poco">Poco</MenuItem>
+                                        <MenuItem value="moto">Moto</MenuItem>
+                                        <MenuItem value="panasonic">Panasonic</MenuItem>
+                                        <MenuItem value="intex">Intex</MenuItem>
+                                        <MenuItem value="micromax">Micromax</MenuItem>
+                                        <MenuItem value="sony">Sony</MenuItem>
                                     </Select>
                                 </FormControl>
                                 <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
-                                        Description
-                  </InputLabel>
+                                        Selling Mobile Name/Model
+                                    </InputLabel>
+                                    <Input
+                                        id="mobileName"
+                                        type="text"
+                                        // name=""
+                                        value={this.state.mobileName}
+                                        onChange={this.handleChange("mobileName")}
+                                    />
+                                </FormControl>
+                                
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        Description (Enter RAM, ROM, BATTERY BACKUP)
+                                    </InputLabel>
                                     <Input
                                         id="description"
                                         type="text"
@@ -228,16 +315,38 @@ class AdPost extends React.Component {
                                 </FormControl>
                                 <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
-                                        Price
-                  </InputLabel>
+                                        IMEI Number
+                                    </InputLabel>
                                     <Input
-                                        id="price"
+                                        id="imei"
                                         type="text"
-                                        value={this.state.price}
-                                        onChange={this.handleChange("price")}
+                                        value={this.state.imei}
+                                        onChange={this.handleChange("imei")}
                                     />
                                 </FormControl>
                                 <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                        Price
+                                    </InputLabel>
+                                    <Input
+                                        id="priceOld"
+                                        type="text"
+                                        value={this.state.priceOld}
+                                        onChange={this.handleChange("priceOld")}
+                                    />
+                                </FormControl>
+                                <FormControl fullWidth className={classes.margin}>
+                                    <InputLabel htmlFor="adornment-password">
+                                     How many years old
+                                    </InputLabel>
+                                    <Input
+                                        id="old"
+                                        type="text"
+                                        value={this.state.old}
+                                        onChange={this.handleChange("old")}
+                                    />
+                                </FormControl>
+                                {/* <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
                                         Address
                   </InputLabel>
@@ -247,8 +356,8 @@ class AdPost extends React.Component {
                                         value={this.state.address}
                                         onChange={this.handleChange("address")}
                                     />
-                                </FormControl>
-                                <FormControl fullWidth className={classes.margin}>
+                                </FormControl> */}
+                                {/* <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
                                         City
                   </InputLabel>
@@ -258,8 +367,8 @@ class AdPost extends React.Component {
                                         value={this.state.city}
                                         onChange={this.handleChange("city")}
                                     />
-                                </FormControl>
-                                <FormControl fullWidth className={classes.margin}>
+                                </FormControl> */}
+                                {/* <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">Email</InputLabel>
                                     <Input
                                         id="email"
@@ -267,8 +376,8 @@ class AdPost extends React.Component {
                                         value={this.state.email}
                                         onChange={this.handleChange("email")}
                                     />
-                                </FormControl>
-                                <FormControl fullWidth className={classes.margin}>
+                                </FormControl> */}
+                                {/* <FormControl fullWidth className={classes.margin}>
                                     <InputLabel htmlFor="adornment-password">
                                         Phone
                   </InputLabel>
@@ -278,7 +387,7 @@ class AdPost extends React.Component {
                                         value={this.state.phone}
                                         onChange={this.handleChange("phone")}
                                     />
-                                </FormControl>
+                                </FormControl> */}
                                 <FormControl
                                     fullWidth
                                     className={classNames(classes.margin, classes.textField)}
@@ -303,7 +412,7 @@ class AdPost extends React.Component {
                                     className={classes.button}
                                     type="submit"
                                 >
-                                    Save Ad
+                                    Save
                 </Button>
                                 {this.state.error && (
                                     <p style={{ color: "red" }}>{this.state.error}</p>

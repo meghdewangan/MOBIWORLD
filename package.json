@@ -10,7 +10,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "MEGHRAJ DEWANGAN, PREM KUMAR PAINKRA, HIMANSHU SAHU, RITIK SAHU, ANKUSH KUMAR SINGH, ABHISHEK TOPPO",
+  "author": "MEGHRAJ DEWANGAN, PREM KUMAR PAINKRA, HIMANSHU SAHU, RITIK SAHU, ANKUSH KUMAR SINGH, ABHISHEK TOPPO, RAKESH SINGH SIDAR",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

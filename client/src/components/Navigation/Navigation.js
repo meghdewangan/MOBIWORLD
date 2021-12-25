@@ -1,5 +1,3 @@
-
-
 import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
 import classNames from 'classnames';
@@ -24,28 +22,54 @@ const Navigation = (props) => {
                                 <img src="./images/olx.png" />
                             </Link>
                         </Grid>
+
+                        {/* <Typography
+                         component="span"
+                        >
+                        Span text
+                        </Typography> */}
+
                         <Grid item xs={6} sm={10} md={6} >
                             <Grid className="NavMenu">
 
+                                
+                    
+                        {/* <Grid item md={12} > */}
+                            {/* < variant="contained" style={{ marginRight: "100em"}}>
+                                MOBIWORLD
+                            </Typography> */}
+                        {/* </Grid>     */}
+
 
                                 {/* <Link to="/login"> */}
+
+                                {/* <Typography
+                         component="span"
+                        >
+                        Span text
+                        </Typography> */}
+                                    <Button
+                                    style={{ position: "absolute", left: "110px", color: "white", fontStyle: "oblique", fontSize: "2em", borderRadius:"50px" }}>
+                                    MOBIWORLD
+                                    </Button>   
+                                    
                                     <Button variant="contained"
                                         color="default"
-                                        style={{ color: "#ff0021", marginRight:"1em" }}
+                                        style={{ color: "#ff0021", marginRight:"1em", borderRadius:"50px" }}
                                        
                                         component={Link}
-                                        to={"/login"}>My Account
+                                        to={"/login"}>MY PROFILE
                                         <Dashboard/>
                                         </Button>
                                 {/* </Link> */}
                                 {/* <Link to="/posting"> */}
-                                    <Button variant="contained" 
+                                    <Button variant="contained"
                                         color="default"
-                                        style={{ color: "#ffffff" ,backgroundColor:"#93e84f" }}
+                                        style={{ color: "#ffffff" ,backgroundColor:"#93e84f", borderRadius:"50px" }}
                                         component={Link}
                                         to={"/posting"} >
-                                    
-                                        Submit a Free Ad
+                                        
+                                        SELL PHONE 
                                         <CloudUploadIcon  />
                                     </Button>
                                 {/* </Link> */}

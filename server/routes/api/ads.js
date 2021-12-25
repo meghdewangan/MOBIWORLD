@@ -62,14 +62,17 @@ router.post('/', upload.single("file"), (req, res) => {
 
     const newAd = new AdModel({
         name: req.body.name,
-        title: req.body.title,
-        category: req.body.category,
-        description: req.body.description,
-        price: req.body.price,
+        phone: req.body.phone,
+        email: req.body.email,
+        aadhar: req.body.aadhar,
         address: req.body.address,
         city: req.body.city,
-        email: req.body.email,
-        phone: req.body.phone,
+        category: req.body.category,
+        mobileName: req.body.mobileName,
+        description: req.body.description,
+        imei: req.body.imei,
+        priceOld: req.body.priceOld,
+        old: req.body.old,
         userId: req.body.userId,
         file: file
 

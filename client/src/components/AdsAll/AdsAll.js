@@ -60,7 +60,7 @@ class AdsAll extends React.Component {
                         } */}
                             {
                                 ads.length == 0 ? <div className="list-item list-item--messagea">
-                                    <h1>No Ads </h1>
+                                    <h1>Not Available </h1>
                                 </div> : ads.map((ads) =>
                                     (
                                         <AdsList key={ads.id} {...ads} />

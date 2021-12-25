@@ -10,6 +10,7 @@ import PageNotFound from './PageNotFound';
 import LatestProduct from './LatestProduct/LatestProduct';
 import SubCategory from './SubCategory/SubCategory';
 import Navigation from './Navigation/Navigation';
+// import Slider from './Slider/Slider';s
 
 
 export {
@@ -25,4 +26,5 @@ export {
     Navigation,
     SubCategory,
     PageNotFound,
+    // Slider,
 }

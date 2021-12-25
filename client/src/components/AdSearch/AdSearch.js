@@ -51,22 +51,26 @@ class AdSearch extends React.Component {
                             {/* Start CategorySeerch Text */}
                             <Grid item xs={12} sm={12} md={6}>
                                 <FormControl style={{ minWidth: '100%' }} >
-                                    <InputLabel htmlFor="category">Select Category</InputLabel>
+                                    <InputLabel htmlFor="category">Select Mobile Brand</InputLabel>
                                     <Select value={this.state.category} onChange={this.handleCategoryChange} inputProps={{ name: 'category', id: 'category', }}>
                                         <MenuItem value="">
                                             <em>None</em>
                                         </MenuItem>
-                                        <MenuItem value="property">Property</MenuItem>
-                                        <MenuItem value="vehicle">Vehicle</MenuItem>
-                                        <MenuItem value="electronics">Electronics</MenuItem>
-                                        <MenuItem value="furniture">Furniture</MenuItem>
-                                        <MenuItem value="jobs">Jobs</MenuItem>
-                                        <MenuItem value="mobiles">Mobiles</MenuItem>
-                                        <MenuItem value="bikes">Bikes</MenuItem>
-                                        <MenuItem value="books">Books</MenuItem>
-                                        <MenuItem value="fashion">Fashion</MenuItem>
-                                        <MenuItem value="pets">Pets</MenuItem>
-                                        <MenuItem value="service">Services</MenuItem>
+                                        <MenuItem value="apple">Apple</MenuItem>
+                                        <MenuItem value="oneplus">OnePlus</MenuItem>
+                                        <MenuItem value="oppo">Oppo</MenuItem>
+                                        <MenuItem value="vivo">Vivo</MenuItem>
+                                        <MenuItem value="samsung">Samsung</MenuItem>
+                                        <MenuItem value="xiaomi">Xiaomi</MenuItem>
+                                        <MenuItem value="realme">Realme</MenuItem>
+                                        <MenuItem value="honor">Honor</MenuItem>
+                                        <MenuItem value="nokia">Nokia</MenuItem>
+                                        <MenuItem value="poco">Poco</MenuItem>
+                                        <MenuItem value="moto">Moto</MenuItem>
+                                        <MenuItem value="panasonic">Panasonic</MenuItem>
+                                        <MenuItem value="intex">Intex</MenuItem>
+                                        <MenuItem value="micromax">Micromax</MenuItem>
+                                        <MenuItem value="sony">Sony</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Grid>

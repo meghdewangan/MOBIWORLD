@@ -15,69 +15,99 @@ import './Category.css';
 
 const tiers = [
     {
-        buttonText: 'Properties',
-        buttonImag: './images/house.svg',
-        buttonLink: '/property',
+        buttonText: 'Apple',
+        buttonImag: './images/apple.png',
+        buttonLink: '/apple',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Cars',
-        buttonImag: './images/car.svg',
-        buttonLink: '/vehicle',
+        buttonText: 'OnePlus',
+        buttonImag: './images/oneplus.png',
+        buttonLink: '/oneplus',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Electronics',
-        buttonImag: './images/computer.svg',
-        buttonLink: '/electronics',
+        buttonText: 'Oppo',
+        buttonImag: './images/oppo.png',
+        buttonLink: '/oppo',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Furniture',
-        buttonImag: './images/bed.svg',
-        buttonLink: '/furniture',
+        buttonText: 'Vivo',
+        buttonImag: './images/vivo.png',
+        buttonLink: '/vivo',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Jobs',
-        buttonImag: './images/job.svg',
-        buttonLink: '/jobs',
+        buttonText: 'Samsung',
+        buttonImag: './images/samsung.png',
+        buttonLink: '/samsung',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Mobiles',
-        buttonImag: './images/mobile.svg',
-        buttonLink: '/mobiles',
+        buttonText: 'Xiaomi',
+        buttonImag: './images/xiaomi.png',
+        buttonLink: '/xiaomi',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Bikes',
-        buttonImag: './images/bikes.svg',
-        buttonLink: '/bikes',
+        buttonText: 'Realme',
+        buttonImag: './images/realme.png',
+        buttonLink: '/realme',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Books,Sports',
-        buttonImag: './images/book.svg',
-        buttonLink: '/books',
+        buttonText: 'Honor',
+        buttonImag: './images/honor.png',
+        buttonLink: '/honor',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Fashion',
-        buttonImag: './images/fashion.svg',
-        buttonLink: '/fashion',
+        buttonText: 'Nokia',
+        buttonImag: './images/nokia.png',
+        buttonLink: '/nokia',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Pets',
-        buttonImag: './images/pet.svg',
-        buttonLink: '/pets',
+        buttonText: 'Poco',
+        buttonImag: './images/poco.png',
+        buttonLink: '/poco',
         buttonVariant: 'outlined',
     },
     {
-        buttonText: 'Services',
-        buttonImag: './images/services.svg',
-        buttonLink: '/service',
+        buttonText: 'Moto',
+        buttonImag: './images/moto.png',
+        buttonLink: '/moto',
+        buttonVariant: 'outlined',
+    },
+    // {
+    //     buttonText: 'LG',
+    //     buttonImag: './images/lg.svg',
+    //     buttonLink: '/lg',
+    //     buttonVariant: 'outlined',
+    // },
+    {
+        buttonText: 'Panasonic',
+        buttonImag: './images/panasonic.png',
+        buttonLink: '/panasonic',
+        buttonVariant: 'outlined',
+    },
+    {
+        buttonText: 'Intex',
+        buttonImag: './images/intex.png',
+        buttonLink: '/intex',
+        buttonVariant: 'outlined',
+    },
+    {
+        buttonText: 'Micromax',
+        buttonImag: './images/micromax.png',
+        buttonLink: '/micromax',
+        buttonVariant: 'outlined',
+    },
+    {
+        buttonText: 'Sony',
+        buttonImag: './images/sony.png',
+        buttonLink: '/sony',
         buttonVariant: 'outlined',
     },
 
@@ -93,12 +123,12 @@ const Category = () => {
             <Grid container spacing={8}  alignItems="flex-end">
                 {tiers.map(tier => (
                     // Enterprise card is full width at sm breakpoint
-                    <Grid item  xs={6} sm={tier.title === 'Enterprise' ? 12 : 4} md={2}>
+                    <Grid item lg={4} xs={12} sm={tier.title === 'Enterprise' ? 12 : 4} md={2}>
                         <Card>
                             <Link to={`/category${tier.buttonLink}`}>
                                 <CardContent align="center" className="CardContent">
-                                    <img src={tier.buttonImag} />
-                                    <Typography color="textPrimary" gutterBottom>
+                                    <img style={{height: '200px'}} src={tier.buttonImag} />
+                                     <Typography color="textPrimary" style={{fontSize: '2em'}}  gutterBottom> 
                                         {tier.buttonText}
                                     </Typography>
                                 </CardContent>
