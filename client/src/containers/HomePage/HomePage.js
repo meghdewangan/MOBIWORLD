@@ -20,9 +20,17 @@ class HomePage extends Component {
                     </Grid> */}
                 <Grid container className="box-layout_HomePage">
                     <Grid item md={12} >
-                        <Typography variant="display3" align="center" color="secondary" gutterBottom>
-                            Welcome To Mobile World
-                        </Typography>
+                    <h1
+              style={{
+                color: "#ffff66",
+                fontSize: "6em",
+                textShadow:
+                  "5px 10px 10px 8px #box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+                textAlign: "center",
+              }}
+            >
+              Welcome To Mobile World
+            </h1>
                     </Grid>
                     <Grid item md={12} >
                         <AdSearch />

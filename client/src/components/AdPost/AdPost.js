@@ -393,7 +393,7 @@ class AdPost extends React.Component {
                                     className={classNames(classes.margin, classes.textField)}
                                 >
                                     <ReactDropzone accept="image/*" onDrop={this.onPreviewDrop}>
-                                        Drop an image, get a preview!
+                                        Drop an mobile image, get a preview!
                                 </ReactDropzone>
                                 </FormControl>
                                 {this.state.files.length > 0 && <h3>Previews</h3>}{" "}
@@ -406,6 +406,26 @@ class AdPost extends React.Component {
                                         style={{ padding: "20px", marginBottom: "20px" }}
                                     />
                                 ))}
+
+                                   <FormControl
+                                    fullWidth
+                                    className={classNames(classes.margin, classes.textField)}
+                                >
+                                    <ReactDropzone accept="image/*" onDrop={this.onPreviewDrop}>
+                                        Drop an image of bill !
+                                </ReactDropzone>
+                                </FormControl>
+                                {this.state.files.length > 0 && <h3>Previews</h3>}{" "}
+                                {this.state.files.map(file => (
+                                    <img
+                                        src={file.preview}
+                                        key={file.preview}
+                                        alt="Preview"
+                                        width="100px"
+                                        style={{ padding: "20px", marginBottom: "20px" }}
+                                    />
+                                ))}
+                                
                                 <Button
                                     variant="contained"
                                     color="primary"

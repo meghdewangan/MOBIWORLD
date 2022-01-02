@@ -203,7 +203,7 @@ class AdsList extends React.Component {
                             <DialogTitle id="form-dialog-title">Message</DialogTitle>
                             <DialogContent>
                                 <DialogContentText>
-                                    Give Us your value able feedback
+                                    Give us your valuable feedback
             </DialogContentText>
 
                                 <TextField

@@ -14,7 +14,11 @@ const Navigation = (props) => {
     // const { classes } = props;
     return (
         <div>
-            <AppBar position="static" color="secondary" >
+            <AppBar position="static" color="primary" 
+            style={{
+                backgroundImage:
+                  "radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% )",
+              }}   >
                 <Toolbar>
                     <Grid container >
                         <Grid item xs={6} sm={2} md={6}>
@@ -48,10 +52,10 @@ const Navigation = (props) => {
                         >
                         Span text
                         </Typography> */}
-                                    <Button
+                                    {/* <Button
                                     style={{ position: "absolute", left: "110px", color: "white", fontStyle: "oblique", fontSize: "2em", borderRadius:"50px" }}>
                                     MOBIWORLD
-                                    </Button>   
+                                    </Button>    */}
                                     
                                     <Button variant="contained"
                                         color="default"
